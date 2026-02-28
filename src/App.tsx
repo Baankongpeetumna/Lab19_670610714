@@ -28,8 +28,8 @@ function App() {
   const fetchMessages = async (filter?: string) => {
     try {
       const data = filter
-        ? await api.searchMessages(filter)
-        : await api.getMessages()
+          ? await api.searchMessages(filter)
+          : await api.getMessages()
       setMessages(data)
     } catch (error) {
       console.error('Failed to fetch messages:', error)
@@ -97,16 +97,16 @@ function App() {
   }
 
   return (
-    <div className="h-screen flex flex-col max-w-2xl mx-auto bg-white dark:bg-[#1a1a1a] transition-colors">
-      <ChatHeader username={username} onSearch={handleSearch} isDark={isDark} onToggleTheme={toggleTheme} />
-      <MessageList
-        messages={messages}
-        currentUserID={userID}
-        onDeleteMessage={handleDeleteMessage}
-        onEditMessage={handleEditMessage}
-      />
-      <MessageInput onSend={handleSendMessage} />
-    </div>
+      <div className="h-screen flex flex-col max-w-2xl mx-auto bg-white dark:bg-[#1a1a1a] transition-colors">
+        <ChatHeader username={username} onSearch={handleSearch} isDark={isDark} onToggleTheme={toggleTheme} />
+        <MessageList
+            messages={messages}
+            currentUserID={userID}
+            onDeleteMessage={handleDeleteMessage}
+            onEditMessage={handleEditMessage}
+        />
+        <MessageInput onSend={handleSendMessage} />
+      </div>
   )
 }
 
