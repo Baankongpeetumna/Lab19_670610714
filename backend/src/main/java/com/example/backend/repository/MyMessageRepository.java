@@ -28,10 +28,10 @@ public class MyMessageRepository implements MessageRepository {
 
         messages.add(
                 new MessageModel(
-                        UUID.randomUUID(),  // messageID
+                        UUID.randomUUID(),
                         user,
                         message,
-                        false               // deleted
+                        false
                 )
         );
 
@@ -45,7 +45,7 @@ public class MyMessageRepository implements MessageRepository {
             if (m.getMessageID().equals(messageID)
                     && m.getUser().getUserID().equals(userID)) {
 
-                m.setDeleted(true); // ⭐ soft delete
+                m.setDeleted(true);
                 return true;
             }
         }

@@ -11,8 +11,8 @@ import java.util.UUID;
 @Setter
 public class MessageModel {
 
-    private UUID messageID;   // ⭐ ต้องชื่อ messageID
-    private UserModel user;   // ⭐ ต้องเป็น object
+    private UUID messageID;
+    private UserModel user;
     private String message;
-    private boolean deleted;  // ⭐ ต้องมี
+    private boolean deleted;
 }

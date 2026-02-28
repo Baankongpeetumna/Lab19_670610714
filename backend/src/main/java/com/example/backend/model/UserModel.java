@@ -11,6 +11,6 @@ import java.util.UUID;
 @Setter
 public class UserModel {
 
-    private UUID userID;   // ⭐ ต้องชื่อ userID
+    private UUID userID;
     private String username;
 }
